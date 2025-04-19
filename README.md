@@ -52,17 +52,20 @@ gpul-web/
 └── docusaurus.config.js # Configuración de Docusaurus
 ```
 
-## 🤝 Contribuyendo
+## 🤝 Contributing
 
-¡Las contribuciones son bienvenidas! Aquí te explicamos cómo puedes ayudar:
+We welcome all contributions! Whether you're fixing bugs, improving documentation, or adding new features, your help is appreciated.
 
-1. Haz un fork del repositorio
-2. Crea una rama para tu feature/fix (`git checkout -b feature/AmazingFeature`)
-3. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Haz push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+### Quick Start
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feat/amazing-feature`)
+3. Make your changes following our [Conventional Commits](https://www.conventionalcommits.org/) format
+4. Push to the branch (`git push origin feat/amazing-feature`)
+5. Open a Pull Request
 
-Por favor, asegúrate de que tus contribuciones sigan nuestras guías de estilo y mensajes de commit.
+All changes will be reviewed by a member of the current GPUL board before being merged.
+
+For more detailed information, please read our [Contributing Guide](CONTRIBUTING.md).
 
 ## 📄 Licencia
 
