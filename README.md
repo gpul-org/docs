@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="static/img/logo.svg" alt="GPUL Logo" width="200"/>
+  <img src="static/img/logo-old.svg" alt="GPUL Logo" width="250"/>
 </div>
 
 # GPUL Main Site
