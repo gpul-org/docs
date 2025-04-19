@@ -1,0 +1,10 @@
+open-source:
+  label: Open Source
+  permalink: /open-source
+  description: Articles about open source software, development practices, and the open source community. Topics include contributing to open source projects, open source licenses, and the benefits of open source software.
+
+linux:
+  label: Linux
+  permalink: /linux
+  description: Articles about Linux, the open source operating system. Topics include Linux distributions, Linux kernel, Linux security, and Linux administration.
+
