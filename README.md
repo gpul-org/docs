@@ -8,48 +8,48 @@
 ![pnpm](https://img.shields.io/badge/pnpm-%3E%3D10.0.0-blue.svg)
 ![Node.js](https://img.shields.io/badge/node-%3E%3D22.0.0-green.svg)
 
-Sitio web oficial de GPUL (Grupo de Programadores y Usuarios de Linux). Desarrollado con Docusaurus.
+Official website of GPUL (Grupo de Programadores y Usuarios de Linux). Built with Docusaurus.
 
-## 🚀 Comenzando
+## 🚀 Getting Started
 
-### 📋 Prerrequisitos
+### 📋 Prerequisites
 
-- [Node.js](https://nodejs.org/) (versión 22.0 o superior)
-- [pnpm](https://pnpm.io/) (versión 10.0 o superior)
+- [Node.js](https://nodejs.org/) (version 22.0 or higher)
+- [pnpm](https://pnpm.io/) (version 10.0 or higher)
 - Git
 
-### 🔧 Instalación
+### 🔧 Installation
 
-1. Clonar el repositorio:
+1. Clone the repository:
 ```bash
 git clone https://github.com/gpul/web.git gpul-web
 cd gpul-web
 ```
 
-2. Instalar dependencias:
+2. Install dependencies:
 ```bash
 pnpm install
 ```
 
-3. Iniciar el servidor de desarrollo:
+3. Start the development server:
 ```bash
 pnpm start
 ```
 
-El sitio estará disponible en `http://localhost:3000`.
+The site will be available at `http://localhost:3000`.
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 gpul-web/
-├── docs/                # Archivos de documentación
-├── blog/                # Posts del blog
-├── src/                 # Archivos fuente
-│   ├── components/      # Componentes React
-│   ├── css/             # CSS personalizado
-│   └── pages/           # Páginas adicionales
-├── static/              # Assets estáticos
-└── docusaurus.config.js # Configuración de Docusaurus
+├── docs/                # Documentation files
+├── blog/                # Blog posts
+├── src/                 # Source files
+│   ├── components/      # React components
+│   ├── css/             # Custom CSS
+│   └── pages/           # Additional pages
+├── static/              # Static assets
+└── docusaurus.config.js # Docusaurus configuration
 ```
 
 ## 🤝 Contributing
@@ -67,16 +67,16 @@ All changes will be reviewed by a member of the current GPUL board before being 
 
 For more detailed information, please read our [Contributing Guide](CONTRIBUTING.md).
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está licenciado bajo la Licencia GPL v3 - ver el archivo [LICENSE](LICENSE) para más detalles.
+This project is licensed under the GPL v3 License - see the [LICENSE](LICENSE) file for details.
 
-## 📫 Contacto
+## 📫 Contact
 
-Para cualquier pregunta o sugerencia, por favor contacta con el equipo de GPUL a través de nuestros canales oficiales.
+For any questions or suggestions, please contact the GPUL team through our official channels.
 
 ---
 
 <div align="center">
-  <sub>Construido con ❤️ por GPUL</sub>
+  <sub>Built with ❤️ by GPUL</sub>
 </div>
