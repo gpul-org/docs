@@ -5,79 +5,75 @@
 # GPUL Main Site
 
 ![GitHub License](https://img.shields.io/github/license/gpul-org/web)
+![pnpm](https://img.shields.io/badge/pnpm-%3E%3D10.0.0-blue.svg)
+![Node.js](https://img.shields.io/badge/node-%3E%3D22.0.0-green.svg)
 
-This is the main site for GPUL (Grupo de Programadores y Usuarios de Linux), built using [Docusaurus](https://docusaurus.io/).
+Sitio web oficial de GPUL (Grupo de Programadores y Usuarios de Linux). Desarrollado con Docusaurus.
 
-## About
+## 🚀 Comenzando
 
-This site serves as the central hub for GPUL, containing:
+### 📋 Prerrequisitos
 
-- Landing page with key information about the association
-- Blog posts with news and updates
-- Event listings and calendar
-- Documentation about the association, its activities and resources
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (version 16.14 or above)
-- npm or yarn package manager
+- [Node.js](https://nodejs.org/) (versión 22.0 o superior)
+- [pnpm](https://pnpm.io/) (versión 10.0 o superior)
 - Git
 
-### Installation
+### 🔧 Instalación
 
-1. Clone the repository:
+1. Clonar el repositorio:
 ```bash
 git clone https://github.com/gpul/web.git gpul-web
 cd gpul-web
 ```
 
-2. Install dependencies:
+2. Instalar dependencias:
 ```bash
-npm install
-# or
-yarn install
+pnpm install
 ```
 
-3. Start the development server:
+3. Iniciar el servidor de desarrollo:
 ```bash
-npm start
-# or
-yarn start
+pnpm start
 ```
 
-The site will be available at `http://localhost:3000`.
+El sitio estará disponible en `http://localhost:3000`.
 
-## Project Structure
+## 📁 Estructura del Proyecto
 
 ```
 gpul-web/
-├── docs/                # Documentation files
-├── blog/                # Blog posts
-├── src/                 # Source files
-│   ├── components/      # React components
-│   ├── css/             # Custom CSS
-│   └── pages/           # Additional pages
-├── static/              # Static assets
-└── docusaurus.config.js # Docusaurus configuration
+├── docs/                # Archivos de documentación
+├── blog/                # Posts del blog
+├── src/                 # Archivos fuente
+│   ├── components/      # Componentes React
+│   ├── css/             # CSS personalizado
+│   └── pages/           # Páginas adicionales
+├── static/              # Assets estáticos
+└── docusaurus.config.js # Configuración de Docusaurus
 ```
 
-## Contributing
+## 🤝 Contribuyendo
 
-We welcome contributions from the community! Here's how you can help:
+¡Las contribuciones son bienvenidas! Aquí te explicamos cómo puedes ayudar:
 
-1. Fork the repository
-2. Create a new branch for your feature/fix
-3. Make your changes
-4. Submit a pull request
+1. Haz un fork del repositorio
+2. Crea una rama para tu feature/fix (`git checkout -b feature/AmazingFeature`)
+3. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Haz push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-Please ensure your contributions follow our code style and commit message guidelines.
+Por favor, asegúrate de que tus contribuciones sigan nuestras guías de estilo y mensajes de commit.
 
-## License
+## 📄 Licencia
 
-This project is licensed under the GPL v3 License - see the [LICENSE](LICENSE) file for details.
+Este proyecto está licenciado bajo la Licencia GPL v3 - ver el archivo [LICENSE](LICENSE) para más detalles.
 
-## Contact
+## 📫 Contacto
 
-For any questions or suggestions, please reach out to the GPUL team through our official channels.
+Para cualquier pregunta o sugerencia, por favor contacta con el equipo de GPUL a través de nuestros canales oficiales.
+
+---
+
+<div align="center">
+  <sub>Construido con ❤️ por GPUL</sub>
+</div>
