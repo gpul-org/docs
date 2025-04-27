@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'GPUL',
-  tagline: 'Grupo de Programadores y Usuarios de Linux',
+  tagline: 'Grupo de Programadores e Usuarios de Linux',
   favicon: 'img/favicon.ico',
 
   url: 'https://gpul.org',
@@ -19,8 +19,8 @@ const config: Config = {
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
-    defaultLocale: 'es',
-    locales: ['es'],
+    defaultLocale: 'gl',
+    locales: ['gl'],
   },
 
   presets: [
@@ -52,30 +52,24 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/gpul-social-card.jpg',
+    image: 'img/gpul-social-card.png',
     navbar: {
       title: 'GPUL',
       logo: {
         alt: 'GPUL Logo',
-        src: 'img/logo.png',
+        src: 'img/logo-small.svg',
       },
       items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'sidebar',
+          position: 'left',
+          label: 'Wiki',
+        },
         {
           to: '/blog',
           label: 'Blog',
           position: 'left',
-        },
-        {
-          to: '/events',
-          label: 'Eventos',
-          position: 'left',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Docs',
         },
         {
           href: 'https://github.com/gpul-org/web',
@@ -88,8 +82,12 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Socials',
+          title: 'Redes',
           items: [
+            {
+              label: 'Bluesky',
+              href: 'https://bsky.app/profile/gpul.org',
+            },
             {
               label: 'Instagram',
               href: 'https://www.instagram.com/gpul_',
@@ -99,21 +97,17 @@ const config: Config = {
               href: 'https://www.linkedin.com/company/gpul',
             },
             {
-              label: 'Bluesky',
-              href: 'https://bsky.app/profile/gpul.org',
-            },
-            {
               label: 'X',
               href: 'https://x.com/gpul_',
             },
           ],
         },
         {
-          title: 'Nuestros fregados',
+          title: 'Os nosos fregados',
           items: [
             {
               label: 'Eventos',
-              to: '/events',
+              to: '/eventos',
             },
             {
               label: 'HackUDC',
@@ -151,7 +145,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Grupo de Programadores y Usuarios de Linux.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Grupo de Programadores e Usuarios de Linux.`,
     },
     prism: {
       theme: prismThemes.github,
