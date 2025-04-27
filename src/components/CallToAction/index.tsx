@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import Link from "@docusaurus/Link";
-import styles from "./styles.module.css";
+import React, {ReactNode} from 'react';
+import Link from '@docusaurus/Link';
+import styles from './styles.module.css';
 
 export default function CallToAction(): ReactNode {
   return (

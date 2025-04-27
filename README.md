@@ -4,9 +4,7 @@
 
 # GPUL Main Site
 
-![GitHub License](https://img.shields.io/github/license/gpul-org/web)
-![pnpm](https://img.shields.io/badge/pnpm-%3E%3D10.0.0-blue.svg)
-![Node.js](https://img.shields.io/badge/node-%3E%3D22.0.0-green.svg)
+![GitHub License](https://img.shields.io/github/license/gpul-org/web) ![pnpm](https://img.shields.io/badge/pnpm-%3E%3D10.0.0-blue.svg) ![Node.js](https://img.shields.io/badge/node-%3E%3D22.0.0-green.svg)
 
 Official website of GPUL (Grupo de Programadores y Usuarios de Linux). Built with Docusaurus.
 
@@ -21,17 +19,20 @@ Official website of GPUL (Grupo de Programadores y Usuarios de Linux). Built wit
 ### 🔧 Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/gpul/web.git gpul-web
 cd gpul-web
 ```
 
 2. Install dependencies:
+
 ```bash
 pnpm install
 ```
 
 3. Start the development server:
+
 ```bash
 pnpm start
 ```
@@ -57,6 +58,7 @@ gpul-web/
 We welcome all contributions! Whether you're fixing bugs, improving documentation, or adding new features, your help is appreciated.
 
 ### Quick Start
+
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feat/amazing-feature`)
 3. Make your changes following our [Conventional Commits](https://www.conventionalcommits.org/) format

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
@@ -9,14 +9,14 @@ export default function Intro(): ReactNode {
         <h2 className={styles.title}>27 anos promovendo a cultura libre</h2>
         <div className={styles.content}>
           <p>
-            Toda unha vida apoiando a tecnoloxía libre, facendo activismo e mostrándolle cada día
-            a máis xente o importante que é para a sociedade.
+            Toda unha vida apoiando a tecnoloxía libre, facendo activismo e
+            mostrándolle cada día a máis xente o importante que é para a
+            sociedade.
           </p>
           <div className="margin-top--lg">
             <Link
               className="button button--outline button--primary button--lg"
-              to="/docs/estatutos"
-            >
+              to="/docs/estatutos">
               Estatutos
             </Link>
           </div>

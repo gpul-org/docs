@@ -1,7 +1,9 @@
 {
-  "name": "gpul-docs",
-  "version": "0.0.0",
+  "name": "web",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "https://github.com/gpul-org/web#readme",
+  "license": "GPL-3.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -10,7 +12,6 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc"
   },
@@ -28,6 +29,7 @@
     "@docusaurus/tsconfig": "3.7.0",
     "@docusaurus/types": "3.7.0",
     "@types/react": "^19.1.2",
+    "prettier": "^3.5.3",
     "typescript": "~5.6.2"
   },
   "browserslist": {

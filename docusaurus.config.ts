@@ -29,8 +29,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/gpul-org/web',
+          editUrl: 'https://github.com/gpul-org/web',
         },
         blog: {
           showReadingTime: true,
@@ -38,8 +37,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl:
-            'https://github.com/gpul-org/web',
+          editUrl: 'https://github.com/gpul-org/web',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -53,6 +51,13 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/gpul-social-card.png',
+    metadata: [
+      {
+        name: 'keywords',
+        content: 'open source, linux, gpul, blog, udc, coruna, fic',
+      },
+      {name: 'twitter:card', content: 'summary_large_image'},
+    ],
     navbar: {
       title: 'GPUL',
       logo: {
@@ -152,6 +157,54 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://gpul.org',
+      },
+    },
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Grupo de Programadores e Usuarios de Linux (GPUL)',
+        alternateName: 'GPUL',
+        url: 'https://gpul.org/',
+        logo: 'https://gpul.org/img/logo.svg',
+        foundingDate: '1998',
+        description:
+          'Organización sen ánimo de lucro promovendo o software libre, o hardware libre e o coñecemento aberto desde 1998.',
+        sameAs: [
+          'https://bsky.app/profile/gpul.org',
+          'https://x.com/gpul_',
+          'https://github.com/gpul-org',
+          'https://www.linkedin.com/company/gpul',
+        ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'Información xeral',
+          email: 'info@gpul.org',
+        },
+        location: {
+          '@type': 'Place',
+          name: 'Universidade da Coruña',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'A Coruña',
+            addressRegion: 'Galicia',
+            addressCountry: 'ES',
+          },
+        },
+      }),
+    },
+  ],
 };
 
 export default config;

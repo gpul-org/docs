@@ -10,7 +10,7 @@ import styles from './index.module.css';
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Welcome to GPUL"
+      title="Benvido a GPUL"
       description="A vibrant community of technology enthusiasts and professionals">
       <main className={styles.main}>
         <Hero />
