@@ -12,12 +12,12 @@ export default function Hero(): ReactNode {
           Grupo de Programadores e <br /> Usuarios de Linux
         </h1>
         <p className={clsx('hero__subtitle', styles.subtitle)}>
-          Liberando mentes dende 1998
+          Defendendo o software libre dende 1998
         </p>
         <div className="margin-top--lg">
           <Link
             className="button button--secondary button--lg margin-right--md"
-            to="/docs/intro">
+            to="/docs/about/intro">
             Wiki
           </Link>
           <Link className="button button--secondary button--lg" to="/blog">

@@ -67,7 +67,7 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'sidebar',
+          sidebarId: 'docs',
           position: 'left',
           label: 'Wiki',
         },
@@ -110,10 +110,6 @@ const config: Config = {
         {
           title: 'Os nosos fregados',
           items: [
-            {
-              label: 'Eventos',
-              to: '/eventos',
-            },
             {
               label: 'HackUDC',
               href: 'https://hackudc.gpul.org',

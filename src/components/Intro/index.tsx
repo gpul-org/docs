@@ -16,7 +16,7 @@ export default function Intro(): ReactNode {
           <div className="margin-top--lg">
             <Link
               className="button button--outline button--primary button--lg"
-              to="/docs/estatutos">
+              to="/docs/about/estatutos">
               Estatutos
             </Link>
           </div>

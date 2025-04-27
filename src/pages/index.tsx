@@ -5,14 +5,13 @@ import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import Activities from '../components/Activities';
 import CallToAction from '../components/CallToAction';
-import styles from './index.module.css';
 
 export default function Home(): ReactNode {
   return (
     <Layout
       title="Benvido a GPUL"
-      description="A vibrant community of technology enthusiasts and professionals">
-      <main className={styles.main}>
+      description="Organización sen ánimo de lucro promovendo o software libre, o hardware libre e o coñecemento aberto desde 1998.">
+      <main>
         <Hero />
         <Intro />
         <Activities />
