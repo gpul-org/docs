@@ -1,0 +1,21 @@
+.cta {
+  background-color: var(--ifm-background-color);
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+}
+
+@media screen and (max-width: 996px) {
+  .cta {
+    padding: 2rem 0;
+  }
+}
