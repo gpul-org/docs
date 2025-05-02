@@ -7,7 +7,7 @@ export default function CallToAction(): ReactNode {
     <section className={styles.cta}>
       <div className="container">
         <div className={styles.content}>
-          <h2 className={styles.title}>Únete á Nosa Comunidade</h2>
+          <h2 className={styles.title}>Únete á nosa comunidade</h2>
           <p className={styles.description}>
             Listo para formar parte de algo maior? Únete á nosa comunidade de
             entusiastas da tecnoloxía e comeza a túa viaxe connosco hoxe.
