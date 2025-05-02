@@ -23,7 +23,7 @@ export default function Activities(): ReactNode {
   return (
     <section className={styles.activities}>
       <div className="container">
-        <h2 className={styles.title}>A qué nos dedicamos</h2>
+        <h2 className={styles.title}>A que nos dedicamos</h2>
         <div className={styles.grid}>
           {activities.map((activity, idx) => (
             <div key={idx} className="card">
