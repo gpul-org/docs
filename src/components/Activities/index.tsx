@@ -27,7 +27,7 @@ export default function Activities(): ReactNode {
         <h2 className={styles.title}>A qué nos dedicamos</h2>
         <div className={styles.grid}>
           {activities.map((activity, idx) => (
-            <div key={idx} className={clsx('card')}>
+            <div key={idx} className="card">
               <h3>{activity.title}</h3>
               <p>{activity.description}</p>
             </div>
