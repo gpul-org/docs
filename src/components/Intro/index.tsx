@@ -2,11 +2,14 @@ import React, {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
+const currentYear = new Date().getFullYear();
+const yearsSince = currentYear - 1998;
+
 export default function Intro(): ReactNode {
   return (
     <section className={styles.intro}>
       <div className="container">
-        <h2 className={styles.title}>27 anos promovendo a cultura libre</h2>
+          <h2 className={styles.title}>{yearsSince} anos promovendo a cultura libre</h2>
         <div className={styles.content}>
           <p>
             Toda unha vida apoiando a tecnoloxía libre, facendo activismo e
