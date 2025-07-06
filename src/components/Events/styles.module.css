@@ -1,0 +1,114 @@
+.events {
+  padding: 2rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  text-align: center;
+  padding: 1.5rem 1rem 1rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+.logoLight {
+  display: block;
+}
+
+.logoDark {
+  display: none;
+}
+
+[data-theme='dark'] .logoLight {
+  display: none;
+}
+
+[data-theme='dark'] .logoDark {
+  display: block;
+}
+
+.eventTitle {
+  margin: 0 0 0.5rem;
+  color: var(--ifm-color-primary);
+  font-size: 1.25rem;
+}
+
+.cardBody {
+  flex: 1;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardBody p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.cardBody p:first-child {
+  flex: 1;
+}
+
+.cardBody p:last-child {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+.cardFooter {
+  margin-top: 1rem;
+  padding: 0 1rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .grid {
+    gap: 1rem;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .eventTitle {
+    font-size: 1.125rem;
+  }
+  
+  .cardHeader {
+    padding: 1rem 0.5rem 0.5rem;
+  }
+} 
