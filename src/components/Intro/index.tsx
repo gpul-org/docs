@@ -2,18 +2,7 @@ import React, {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
-const startDate = new Date(1998, 5, 22); // los meses empiezan en 0
-const today = new Date();
-
-let yearsSince = today.getFullYear() - startDate.getFullYear();
-
-const hasHadAnniversary =
-  today.getMonth() > startDate.getMonth() ||
-  (today.getMonth() === startDate.getMonth() && today.getDate() >= startDate.getDate());
-
-if (!hasHadAnniversary) {
-  yearsSince -= 1;
-}
+const years = new Date(Date.now() - new Date(1998, 5, 22)).getUTCFullYear() - 1970
 
 export default function Intro(): ReactNode {
   return (
