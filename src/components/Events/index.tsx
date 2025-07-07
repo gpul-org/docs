@@ -48,8 +48,8 @@ export default function Events(): ReactNode {
         <h2 className={styles.title}>Os nosos eventos</h2>
         <div className={styles.grid}>
           {events.map((event, idx) => (
-            <div key={idx} className={`card ${styles.card}`}>
-              <div className={styles.cardHeader}>
+            <div key={idx} className="card">
+              <div className={`card__header ${styles.cardHeader}`}>
                 <img 
                   src={event.logo.light} 
                   alt={event.logo.alt}
@@ -60,16 +60,16 @@ export default function Events(): ReactNode {
                   alt={event.logo.alt}
                   className={`${styles.logo} ${styles.logoDark}`}
                 />
-                <h3 className={styles.eventTitle}>{event.title}</h3>
+                <h3>{event.title}</h3>
                 <span className={`badge badge--${event.status === 'Activo' ? 'success' : 'secondary'}`}>
                   {event.status}
                 </span>
               </div>
-              <div className={styles.cardBody}>
+              <div className="card__body">
                 <p>{event.description}</p>
-                <p><strong>📅 {event.date}</strong></p>
               </div>
-              <div className={styles.cardFooter}>
+              <div className="card__footer">
+                <p><strong>📅 {event.date}</strong></p>
                 <Link
                   className="button button--outline button--primary button--sm"
                   href={event.url}
