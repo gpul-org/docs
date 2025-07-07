@@ -4,6 +4,7 @@ import type {ReactNode} from 'react';
 import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import Activities from '../components/Activities';
+import Events from '../components/Events';
 import Board from '../components/Board';
 import CallToAction from '../components/CallToAction';
 
@@ -16,6 +17,7 @@ export default function Home(): ReactNode {
         <Hero />
         <Intro />
         <Activities />
+        <Events />
         <Board />
         <CallToAction />
       </main>
