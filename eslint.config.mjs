@@ -10,16 +10,24 @@ import {defineConfig} from 'eslint/config';
 
 export default defineConfig([
   {
+    ignores: ['.docusaurus/', 'build/'],
+  },
+  {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-    plugins: {js},
+    plugins: {
+      js: js,
+      react: pluginReact,
+    },
     extends: ['js/recommended'],
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...pluginReact.configs.flat.recommended.rules,
+    },
   },
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     languageOptions: {globals: globals.browser},
   },
-  tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
   {
     files: ['**/*.json'],
     plugins: {json},
@@ -49,5 +57,13 @@ export default defineConfig([
     plugins: {css},
     language: 'css/css',
     extends: ['css/recommended'],
+  },
+  {
+    files: ['**/*.md/*.{js,jsx,ts,tsx}'],
+    rules: {
+      'react/display-name': 'off',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+    },
   },
 ]);
