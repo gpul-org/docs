@@ -4,8 +4,14 @@
  * work well for content-centric websites.
  */
 
- @media (max-width: 996px) {
+@media (max-width: 996px) {
   .col.footer__col {
    flex-basis: 0;
   }
- }
+}
+
+@media (max-width: 490px) {
+  .col.footer__col {
+   flex-basis: var(--ifm-col-width);
+  }
+}
