@@ -1,4 +1,4 @@
-name: Lint
+name: Lint and format
 on:
   pull_request:
     branches: [main]
@@ -23,3 +23,5 @@ jobs:
       run: pnpm install
     - name: Run ESLint
       run: pnpm dlx eslint .
+    - name: Run prettier
+      run: pnpm exec prettier . --check
