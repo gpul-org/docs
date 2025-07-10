@@ -1,69 +1,63 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
-import pluginReact from 'eslint-plugin-react';
-import json from '@eslint/json';
-import markdown from '@eslint/markdown';
-import css from '@eslint/css';
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import pluginReact from "eslint-plugin-react";
+import hooks from "eslint-plugin-react-hooks";
+import refresh from "eslint-plugin-react-refresh";
+import json from "@eslint/json";
+import markdown from "@eslint/markdown";
+import css from "@eslint/css";
+import { defineConfig,globalIgnores } from "eslint/config";
 
-import {defineConfig} from 'eslint/config';
 
 export default defineConfig([
+  globalIgnores(["package-lock.json"]),
+  { files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"], plugins: { js }, extends: ["js/recommended"] },
+  { files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"], languageOptions: { globals: globals.browser } },
+  tseslint.configs.recommended,
   {
-    ignores: ['.docusaurus/', 'build/'],
+    files: ["**/*.{jsx,tsx}"],
+    ...pluginReact.configs.flat.recommended,
+    languageOptions: {
+      ...pluginReact.configs.flat.recommended.languageOptions,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    rules: {
+      "react/react-in-jsx-scope": "off",
+    },
   },
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    files: ["**/*.{jsx,tsx}"],
     plugins: {
-      js: js,
-      react: pluginReact,
+      "react-hooks": hooks,
+      "react-refresh": refresh,
     },
-    extends: ['js/recommended'],
     rules: {
-      ...tseslint.configs.recommended.rules,
-      ...pluginReact.configs.flat.recommended.rules,
+      ...hooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
     },
   },
+  { files: ["**/*.json"], plugins: { json }, language: "json/json", extends: ["json/recommended"] },
+  { files: ["**/*.jsonc"], plugins: { json }, language: "json/jsonc", extends: ["json/recommended"] },
+  { files: ["**/*.json5"], plugins: { json }, language: "json/json5", extends: ["json/recommended"] },
+  { files: ["**/*.md"], plugins: { markdown }, language: "markdown/commonmark", extends: ["markdown/recommended"] },
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-    languageOptions: {globals: globals.browser},
-  },
-  {
-    files: ['**/*.json'],
-    plugins: {json},
-    language: 'json/json',
-    extends: ['json/recommended'],
-  },
-  {
-    files: ['**/*.jsonc'],
-    plugins: {json},
-    language: 'json/jsonc',
-    extends: ['json/recommended'],
-  },
-  {
-    files: ['**/*.json5'],
-    plugins: {json},
-    language: 'json/json5',
-    extends: ['json/recommended'],
-  },
-  {
-    files: ['**/*.md'],
-    plugins: {markdown},
-    language: 'markdown/gfm',
-    extends: ['markdown/recommended'],
-  },
-  {
-    files: ['**/*.css'],
-    plugins: {css},
-    language: 'css/css',
-    extends: ['css/recommended'],
-  },
-  {
-    files: ['**/*.md/*.{js,jsx,ts,tsx}'],
+    files: ["**/*.css"],
+    plugins: { css },
+    language: "css/css",
+    extends: ["css/recommended"],
     rules: {
-      'react/display-name': 'off',
-      'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
+      "css/no-invalid-properties": ["off"],
+      // There must be some version mismatch error,this property is defined in the rules,
+      // But fails when used. Disabling for now
+      //"css/no-invalid-properties": ["error",{allowUnknownVariables: true}],
     },
   },
 ]);

@@ -1,8 +1,8 @@
 ---
 slug: example-blog-post
 title: Example Blog Post
-authors: [jorgeteixe]
-tags: [open-source, linux]
+authors: \[jorgeteixe\]
+tags: \[open-source, linux\]
 ---
 
 Lorem ipsum dolor sit amet...
