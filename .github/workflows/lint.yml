@@ -1,0 +1,13 @@
+name: Lint
+on:
+  pull_requests:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install modules
+      run: pnpm install
+    - name: Run ESLint
+      run: pnpm dlx eslint .
