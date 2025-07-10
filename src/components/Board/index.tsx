@@ -50,7 +50,10 @@ export default function Board(): ReactNode {
               <div className="card">
                 <div className="card__header">
                   <div className="avatar">
-                    <a href={member.gh} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={member.gh}
+                      target="_blank"
+                      rel="noopener noreferrer">
                       <img
                         className="avatar__photo"
                         src={`${member.gh}.png`}

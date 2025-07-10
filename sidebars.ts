@@ -22,10 +22,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'HackUDC',
-          items: [
-            'events/hackudc/overview',
-            'events/hackudc/organizing',
-          ],
+          items: ['events/hackudc/overview', 'events/hackudc/organizing'],
         },
         {
           type: 'category',

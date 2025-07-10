@@ -9,7 +9,9 @@ export default function Intro(): ReactNode {
   return (
     <section className={styles.intro}>
       <div className="container">
-        <h2 className={styles.title}>{yearsSince} anos promovendo a cultura libre</h2>
+        <h2 className={styles.title}>
+          {yearsSince} anos promovendo a cultura libre
+        </h2>
         <div className={styles.content}>
           <p>
             Toda unha vida apoiando a tecnoloxía libre, facendo activismo e
