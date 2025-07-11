@@ -17,7 +17,8 @@ const events = [
   },
   {
     title: 'AtlánticaConf',
-    description: 'Conferencia de tecnoloxía e innovación do noroeste peninsular.',
+    description:
+      'Conferencia de tecnoloxía e innovación do noroeste peninsular.',
     url: 'https://atlanticaconf.com',
     date: '2027',
     status: 'Próximamente',
@@ -50,18 +51,19 @@ export default function Events(): ReactNode {
           {events.map((event, idx) => (
             <div key={idx} className="card">
               <div className={`card__header ${styles.cardHeader}`}>
-                <img 
-                  src={event.logo.light} 
+                <img
+                  src={event.logo.light}
                   alt={event.logo.alt}
                   className={`${styles.logo} ${styles.logoLight}`}
                 />
-                <img 
-                  src={event.logo.dark} 
+                <img
+                  src={event.logo.dark}
                   alt={event.logo.alt}
                   className={`${styles.logo} ${styles.logoDark}`}
                 />
                 <h3>{event.title}</h3>
-                <span className={`badge badge--${event.status === 'Activo' ? 'success' : 'secondary'}`}>
+                <span
+                  className={`badge badge--${event.status === 'Activo' ? 'success' : 'secondary'}`}>
                   {event.status}
                 </span>
               </div>
@@ -69,7 +71,9 @@ export default function Events(): ReactNode {
                 <p>{event.description}</p>
               </div>
               <div className="card__footer">
-                <p><strong>📅 {event.date}</strong></p>
+                <p>
+                  <strong>📅 {event.date}</strong>
+                </p>
                 <Link
                   className="button button--outline button--primary button--sm"
                   href={event.url}
@@ -84,4 +88,4 @@ export default function Events(): ReactNode {
       </div>
     </section>
   );
-} 
+}

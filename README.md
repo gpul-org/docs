@@ -41,7 +41,7 @@ The site will be available at `http://localhost:3000`.
 
 ## 📁 Project Structure
 
-```
+```plaintext
 gpul-web/
 ├── docs/                # Documentation files
 ├── blog/                # Blog posts

@@ -56,7 +56,7 @@ Where `type` is one of:
 
 We use [Conventional Commits](https://www.conventionalcommits.org/) for our commit messages. The format should be:
 
-```
+```plaintext
 type(scope): description
 
 [optional body]
@@ -66,7 +66,7 @@ type(scope): description
 
 Examples:
 
-```
+```plaintext
 feat(auth): add login functionality
 fix(api): handle null response from server
 docs(readme): update installation instructions

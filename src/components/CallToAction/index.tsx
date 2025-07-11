@@ -13,7 +13,9 @@ export default function CallToAction(): ReactNode {
             entusiastas da tecnoloxía e comeza a túa viaxe connosco hoxe.
           </p>
           <div className="margin-top--lg">
-            <Link className="button button--secondary button--lg" to="/docs/about/becoming-a-member">
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/about/becoming-a-member">
               Comeza Agora
             </Link>
           </div>
