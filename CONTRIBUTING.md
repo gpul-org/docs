@@ -72,6 +72,30 @@ fix(api): handle null response from server
 docs(readme): update installation instructions
 ```
 
+### Code Quality and Pre-Commit Hooks
+
+To help maintain code quality and consistent formatting, this project includes pre-commit hooks that run [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) on staged files before a commit is made. The same linting and formatting is being run on CI.
+
+These hooks can be disabled (opt-out) to give developers flexibility in their workflow, however, we encourage its use, to avoid having to re-do commits to pass CI.
+
+### How It Works
+
+- **ESLint**: Checks for potential bugs and enforces code style rules. If any errors are found, **the commit will be aborted**, and you will need to fix the errors manually before trying to commit again.
+- **Prettier**: Automatically formats your code to ensure a consistent style across the entire codebase.
+
+### How to Disable the Hooks
+
+Hooks are pre-enabled on the repo. If for any reason, you wish to disable the
+
+1.  Navigate to the root directory of the project in your terminal.
+2.  Create the opt-out file by running the following command:
+
+    ```bash
+    touch .opt-out-hooks
+    ```
+
+If you decide you want the hooks to run again, simply delete the `.opt-out-hooks` file.
+
 ### 6. Push Your Changes
 
 ```bash

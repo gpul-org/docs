@@ -69,32 +69,6 @@ All changes will be reviewed by a member of the current GPUL board before being 
 
 For more detailed information, please read our [Contributing Guide](CONTRIBUTING.md).
 
-### Code Quality and Pre-Commit Hooks
-
-To help maintain code quality and consistent formatting, this project includes pre-commit hooks that run [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) on staged files before a commit is made. The same linting and formatting is being run on CI.
-
-These hooks are **completely optional** (opt-in) to give developers flexibility in their workflow, however, we encourage its use, to avoid having to re-do commits to pass CI.
-
-### How It Works
-
-- **ESLint**: Checks for potential bugs and enforces code style rules. If any errors are found, **the commit will be aborted**, and you will need to fix the errors manually before trying to commit again.
-- **Prettier**: Automatically formats your code to ensure a consistent style across the entire codebase.
-
-### How to Enable the Hooks
-
-If you wish to enable the pre-commit hooks on your local machine, follow this simple step.
-
-1.  Navigate to the root directory of the project in your terminal.
-2.  Create the opt-in file by running the following command:
-
-    ```bash
-    touch .opt-in-hooks
-    ```
-
-That's it! The hooks will now run automatically every time you make a commit. The `.opt-in-hooks` file is listed in our `.gitignore`, so it won't be added to the repository.
-
-If you decide you no longer want the hooks to run, simply delete the `.opt-in-hooks` file.
-
 ## 📄 License
 
 This project is licensed under the GPL v3 License - see the [LICENSE](LICENSE) file for details.
