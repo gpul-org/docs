@@ -1,8 +1,8 @@
-import React, {ReactNode} from 'react';
+import React, { ReactNode } from 'react';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
-const years = new Date(Date.now() - new Date(1998, 5, 22)).getUTCFullYear() - 1970
+const yearsSince = new Date(Date.now() - new Date(1998, 5, 22).getTime()).getUTCFullYear() - 1970
 
 export default function Intro(): ReactNode {
   return (
