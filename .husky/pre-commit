@@ -1,0 +1,7 @@
+if [ -f ".opt-in-hooks" ]; then
+  echo "✅ Git hooks are enabled locally. Running pre-commit checks..."
+  pnpm exec lint-staged
+else
+  echo "ℹ️ Skipping pre-commit hooks. To enable, create an '.opt-in-hooks' file."
+  exit 0
+fi
