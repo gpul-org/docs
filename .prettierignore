@@ -5,6 +5,9 @@ build
 coverage
 .docusaurus
 .github
+.gitignore
+.husky
+.prettierignore
 pnpm-lock.yaml
 .svg
 *.svg
