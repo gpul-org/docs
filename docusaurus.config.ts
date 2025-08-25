@@ -5,15 +5,15 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'GPUL',
-  tagline: 'Grupo de Programadores e Usuarios de Linux',
+  title: 'GPUL Docs',
+  tagline: 'Documentación do Grupo de Programadores e Usuarios de Linux',
   favicon: 'img/favicon.ico',
 
-  url: 'https://gpul.org',
+  url: 'https://docs.gpul.org',
   baseUrl: '/',
 
   organizationName: 'gpul-org',
-  projectName: 'web',
+  projectName: 'docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -30,17 +30,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/gpul-org/web',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/gpul-org/web',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          routeBasePath: '/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -54,30 +44,24 @@ const config: Config = {
     metadata: [
       {
         name: 'keywords',
-        content: 'open source, linux, gpul, blog, udc, coruna, fic',
+        content: 'open source, linux, gpul, documentacion, udc, coruna, fic',
       },
       {name: 'twitter:card', content: 'summary_large_image'},
     ],
     navbar: {
-      title: 'GPUL',
+      title: 'GPUL Docs',
       logo: {
         alt: 'GPUL Logo',
         src: 'img/logo-small.svg',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'docs',
-          position: 'left',
-          label: 'Wiki',
+          href: 'https://gpul.org',
+          label: 'Web',
+          position: 'right',
         },
         {
-          to: '/blog',
-          label: 'Blog',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/gpul-org/web',
+          href: 'https://github.com/gpul-org/docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -85,68 +69,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Redes',
-          items: [
-            {
-              label: 'Bluesky',
-              href: 'https://bsky.app/profile/gpul.org',
-            },
-            {
-              label: 'Instagram',
-              href: 'https://www.instagram.com/gpul_',
-            },
-            {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/company/gpul',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/gpul_',
-            },
-          ],
-        },
-        {
-          title: 'Os nosos fregados',
-          items: [
-            {
-              label: 'HackUDC',
-              href: 'https://hackudc.gpul.org',
-            },
-            {
-              label: 'AtlanticaConf',
-              href: 'https://atlanticaconf.com',
-            },
-            {
-              label: 'GPUL Schools',
-              href: 'https://school.gpul.org',
-            },
-          ],
-        },
-        {
-          title: 'Contacto',
-          items: [
-            {
-              label: 'Dirección',
-              href: 'https://www.openstreetmap.org/way/880574043',
-            },
-            {
-              label: '+34 881 01 1369',
-              href: 'tel:+34881011369',
-            },
-            {
-              label: 'info@gpul.org',
-              href: 'mailto:info@gpul.org',
-            },
-            {
-              label: 'Telegram',
-              href: 'https://t.me/+PrK44xhqJ9eP9ZUf',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Grupo de Programadores e Usuarios de Linux.`,
+      copyright: `Grupo de Programadores e Usuarios de Linux`,
     },
     prism: {
       theme: prismThemes.github,
@@ -159,7 +82,7 @@ const config: Config = {
       tagName: 'link',
       attributes: {
         rel: 'preconnect',
-        href: 'https://gpul.org',
+        href: 'https://docs.gpul.org',
       },
     },
     {
@@ -172,8 +95,8 @@ const config: Config = {
         '@type': 'Organization',
         name: 'Grupo de Programadores e Usuarios de Linux (GPUL)',
         alternateName: 'GPUL',
-        url: 'https://gpul.org/',
-        logo: 'https://gpul.org/img/logo.svg',
+        url: 'https://docs.gpul.org/',
+        logo: 'https://docs.gpul.org/img/logo.svg',
         foundingDate: '1998',
         description:
           'Organización sen ánimo de lucro promovendo o software libre, o hardware libre e o coñecemento aberto desde 1998.',
