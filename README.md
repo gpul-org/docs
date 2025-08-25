@@ -2,11 +2,11 @@
   <img src="static/img/logo-old.svg" alt="GPUL Logo" width="250"/>
 </div>
 
-# GPUL Main Site
+# GPUL Documentation Site
 
 ![GitHub License](https://img.shields.io/github/license/gpul-org/web) ![pnpm](https://img.shields.io/badge/pnpm-%3E%3D10.0.0-blue.svg) ![Node.js](https://img.shields.io/badge/node-%3E%3D22.0.0-green.svg)
 
-Official website of GPUL (Grupo de Programadores y Usuarios de Linux). Built with Docusaurus.
+Documentation site for GPUL (Grupo de Programadores y Usuarios de Linux), served under the docs subdomain. Built with Docusaurus.
 
 ## 🚀 Getting Started
 
@@ -44,7 +44,6 @@ The site will be available at `http://localhost:3000`.
 ```plaintext
 gpul-web/
 ├── docs/                # Documentation files
-├── blog/                # Blog posts
 ├── src/                 # Source files
 │   ├── components/      # React components
 │   ├── css/             # Custom CSS
