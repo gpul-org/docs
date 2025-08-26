@@ -1,1 +1,5 @@
+---
+slug: /
+---
+
 # Benvido a GPUL

@@ -32,6 +32,7 @@ const config: Config = {
           editUrl: 'https://github.com/gpul-org/web',
           routeBasePath: '/',
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
