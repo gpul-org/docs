@@ -22,7 +22,7 @@ Para acceder ao teu correo a través do navegador:
 
 ## Xestión de redirección
 
-Como a nosa configuración anterior só incluía redirección de correo, así está configurado por defecto. Os usuarios poden querer manter a redirección pero perderán a capacidade de enviar correos desde outros servidores de correo (xa que agora os campos SPF só permiten enviar desde servidores de correo autorizados).
+Como a nosa configuración anterior só incluía redirección de correo, así está configurado por defecto. Os usuarios poden querer manter a redirección pero **perderán a capacidade de enviar correos desde outros servidores de correo** (xa que agora os campos SPF só permiten enviar desde servidores de correo autorizados).
 
 Para isto deberán usar un cliente de correo correctamente configurado ou o webmail. Para cambiar a redirección:
 
@@ -39,6 +39,8 @@ Para a maioría dos clientes de correo, por exemplo Thunderbird, a configuració
 ![Automatic Config Discovery in Thunderbird](./assets/client-config.png)
 
 Para iniciar sesión, necesitarán crear unha contrasinal de aplicación para o cliente e é o que usarán desde o cliente. Para acceder á configuración de Mailcow, fai clic na chave inglesa (🔧) na parte superior dereita do webmail.
+
+⚠ ️Se recibes un erro de autenticación na interface de Thunderbird, proba a desactivar o novo "Account hub", en _Settings>General>Account hub_
 
 ![App Passwords Mailcow Interface](./assets/app-passwords.png)
 
