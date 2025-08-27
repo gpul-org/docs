@@ -4,11 +4,12 @@ Esta sección explica como funcionan as caixas de correo compartidas ou "persona
 
 ## Funcionamento dos alias compartidos
 
-Os alias compartidos están pensados principalmente para **recibir** correo electrónico. 
+Os alias compartidos están pensados principalmente para **recibir** correo electrónico.
 
 ### Exemplo: presidencia@gpul.org
 
 Actualmente, o alias presidencia@gpul.org está configurado como:
+
 - Un alias que reenvía a `presidencia-archive@gpul.org` (para arquivo)
 - Un alias que reenvía ao enderezo persoal do presidente actual: `nome.apelido@gpul.org`
 
@@ -35,6 +36,7 @@ Para correos **enviados**, esperase que respondas co teu enderezo de correo pers
 ## Outros alias compartidos
 
 Este mesmo funcionamento aplícase a outros alias como:
+
 - info@gpul.org
 - secretaria@gpul.org
 - tesouraria@gpul.org

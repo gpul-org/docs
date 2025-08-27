@@ -44,7 +44,7 @@ const sidebars: SidebarsConfig = {
           label: 'Infraestrutura',
           link: {
             type: 'doc',
-            id: 'running/infrastructure'
+            id: 'running/infrastructure',
           },
           items: [
             {
@@ -52,7 +52,7 @@ const sidebars: SidebarsConfig = {
               label: 'Keycloak',
               link: {
                 type: 'doc',
-                id: 'running/infrastructure/keycloak/index'
+                id: 'running/infrastructure/keycloak/index',
               },
               items: [
                 'running/infrastructure/keycloak/user-guide',
@@ -64,7 +64,7 @@ const sidebars: SidebarsConfig = {
               label: 'Correo electrónico',
               link: {
                 type: 'doc',
-                id: 'running/infrastructure/email/index'
+                id: 'running/infrastructure/email/index',
               },
               items: [
                 'running/infrastructure/email/setup',
@@ -77,7 +77,7 @@ const sidebars: SidebarsConfig = {
               label: 'Nextcloud',
               link: {
                 type: 'doc',
-                id: 'running/infrastructure/nextcloud/index'
+                id: 'running/infrastructure/nextcloud/index',
               },
               items: [
                 'running/infrastructure/nextcloud/user-guide',
@@ -89,7 +89,7 @@ const sidebars: SidebarsConfig = {
               label: 'Vaultwarden',
               link: {
                 type: 'doc',
-                id: 'running/infrastructure/vaultwarden/index'
+                id: 'running/infrastructure/vaultwarden/index',
               },
               items: [
                 'running/infrastructure/vaultwarden/user-guide',
@@ -101,7 +101,7 @@ const sidebars: SidebarsConfig = {
               label: 'FacturaScripts',
               link: {
                 type: 'doc',
-                id: 'running/infrastructure/facturascripts/index'
+                id: 'running/infrastructure/facturascripts/index',
               },
               items: [
                 'running/infrastructure/facturascripts/user-guide',
@@ -114,7 +114,7 @@ const sidebars: SidebarsConfig = {
               label: 'ActivePieces',
               link: {
                 type: 'doc',
-                id: 'running/infrastructure/activepieces/index'
+                id: 'running/infrastructure/activepieces/index',
               },
               items: [
                 'running/infrastructure/activepieces/user-guide',
@@ -126,7 +126,7 @@ const sidebars: SidebarsConfig = {
               label: 'NocoDB',
               link: {
                 type: 'doc',
-                id: 'running/infrastructure/nocodb/index'
+                id: 'running/infrastructure/nocodb/index',
               },
               items: [
                 'running/infrastructure/nocodb/user-guide',
@@ -138,7 +138,7 @@ const sidebars: SidebarsConfig = {
               label: 'Listmonk',
               link: {
                 type: 'doc',
-                id: 'running/infrastructure/listmonk/index'
+                id: 'running/infrastructure/listmonk/index',
               },
               items: [
                 'running/infrastructure/listmonk/user-guide',
