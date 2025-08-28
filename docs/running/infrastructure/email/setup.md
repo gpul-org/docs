@@ -40,7 +40,11 @@ Para a maioría dos clientes de correo, por exemplo Thunderbird, a configuració
 
 Para iniciar sesión, necesitarán crear unha contrasinal de aplicación para o cliente e é o que usarán desde o cliente. Para acceder á configuración de Mailcow, fai clic na chave inglesa (🔧) na parte superior dereita do webmail.
 
-⚠ ️Se recibes un erro de autenticación na interface de Thunderbird, proba a desactivar o novo "Account hub", en _Settings>General>Account hub_
+:::warning
+
+### Configuración con Thunderbird
+
+Se recibes un erro de autenticación na interface de Thunderbird, proba a desactivar o novo "Account hub", en _Settings>General>Account hub_ :::
 
 ![App Passwords Mailcow Interface](./assets/app-passwords.png)
 
