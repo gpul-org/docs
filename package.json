@@ -17,6 +17,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@dipakparmar/docusaurus-plugin-umami": "^2.3.0",
     "@docusaurus/core": "3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
     "@mdx-js/react": "^3.0.0",

@@ -40,6 +40,17 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@dipakparmar/docusaurus-plugin-umami",
+      /** @type {import('@dipakparmar/docusaurus-plugin-umami').Options} */
+      ({
+        websiteID: "5cbc2dc7-8ea2-47bd-8630-4bf3d0172869",
+        analyticsDomain: "umami.gpul.org",
+      }),
+    ],
+  ],
+
   themeConfig: {
     image: 'img/gpul-social-card.png',
     metadata: [
