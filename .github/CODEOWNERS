@@ -1,5 +1,2 @@
 # Default owners for everything in the repo
-*         @gpul-org/xunta-directiva
-
-# .github directory specific owners
-.github/  @gpul-org/tech-dms
+*         @gpul-org/docs-maintainers
