@@ -28,6 +28,7 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'GPUL Schools',
           items: [
+            'events/gpul-schools/install_party',
             'events/gpul-schools/overview',
             'events/gpul-schools/organizing',
           ],
