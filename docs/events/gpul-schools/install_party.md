@@ -16,11 +16,31 @@ Por algún motivo en algunos portátiles por defecto viene el disco en modo RAID
 
 Se recomienda desactivarlo directamente sólo si los instaladores no detectan el disco (se puede hacer desde la BIOS/UEFI), pero es bastante probable que rompa los bootloaders existentes y haga falta recrearlos. Las instrucciones para recrear el de Windows se explican más abajo en este documento en caso de que haga falta.
 
+## Reducción de disco
+
+Para reducir el disco hay que abrir la herramienta `diskmgmt.msc` (se puede ejecutar desde la ventana de diálogo que se abre al pulsar las teclas Win+R). Se pulsa en la partición deseada y se elije reducir el volumen. Se recomiendan mínimo 50GB para instalar Linux.
+
+### Desfragmentación
+
+Si no hay espacio suficiente hay varias formas de intentar reducirlo. La primera es borrar archivos necesarios. La segunda es desfragmentar, esto se puede conseguir abriendo un terminal de administrador (abre el diálogo de Win+R escribe `cmd` y pulsa Ctrl+Shift+Enter) y escribiendo `defrag /A C:` (o la letra que corresponda a la partición a desfragmentar). Si el resultado del análisis dice que se puede desfragmentar hay que ejecutar `defrag C:` y esperar a que acabe, tras lo cual se debe reiniciar.
+
+### Hibernación
+
+A veces el archivo de hibernación puede ocupar demasiado espacio por lo que se recomienda desactivarlo salvo que el usuario no quiera que se quite. Para hacerlo hay que abrir un terminal de administrador (tal y como se describe en el apartado anterior) y ejecutar `powercfg.exe /hibernate off`, tras lo cual se debe reiniciar.
+
+### Visor de eventos
+
+Al intentar reducir el volumen suele aparecer información extra de porqué no se puede reducir más espacio. Pulsando las teclas Win+X y eligiendo "Visor de eventos" y abriendo el apartado Registros de Windows > Aplicaciones aparece la información necesaria. Hay que buscar eventos de tipo "Defrag" e ir leyendo la información que dan hasta encontrar uno que te diga que archivo está impidiendo la reducción de disco. A partir de ahí para cada caso hay que buscar información extra online. Si el archivo que impide la reducción es `hyberfile.sys` hay que desactivar la hibernación tal y como se describe en el apartado anterior.
+
+### Diskpart
+
+Desde un USB externo con un instalador de Windows o un entorno mínimo (se explican más abajo las opciones, pero es recomendable usar un instalador) hay que ejecutar en un terminal `diskpart`. Una vez dentro hay que ejecutar `list vol` y localizar el volumen a reducir, tras lo cual se ejecuta `select vol <n>` (sustituyendo `n` por el número de volumen a reducir) y finalmente se ejecuta `shrink desired=<y>`, siendo `y` el número a reducir en MB (por ejemplo, 50GB es 50000). Si ha funcionado diskpart lo dirá.
+
 ## Bootloader de Windows
 
 ### Comprobar el bootloader
 
-Dentro de Windows usando la herramienta `diskmgmt.msc` (se puede ejecutar desde la ventana de diálogo de Win+R) comprobar el tamaño de la partición de arranque de Windows. Si es de 100MB o menos es muy probable que vaya a dar problemas al instalar Linux.
+Dentro de Windows usando la herramienta `diskmgmt.msc` comprobar el tamaño de la partición de arranque de Windows. Si es de 100MB o menos es muy probable que vaya a dar problemas al instalar Linux.
 
 Por algún motivo los instaladores de la mayoría de distribuciones de Linux aunque crees otra partición EFI siempre intentan instalar en la de Windows y al ser 100MB~ no cabe GRUB por lo que el instalador falla sin especificar el motivo.
 
