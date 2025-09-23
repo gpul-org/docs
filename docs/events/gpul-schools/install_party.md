@@ -1,4 +1,4 @@
-# Linux Install Part - Tips & Tricks
+# Linux Install Party - Tips & Tricks
 
 _Escrito por Sprinter05_
 
@@ -71,3 +71,17 @@ La conexión debería tener lo siguiente:
   - _CA certificate_: `ca.pem` (en el directorio del certificado)
   - _Inner authentication_: PAP
     - Cubrir username y password con los de la cuenta de la UDC
+
+## Misceláneo
+
+### Cambiar el layout de teclado en entorno live
+
+Al iniciar en un entorno live se puede cambiar la distribución de teclado usando el comando `setxkbmap es`.
+
+### Añadir el usuario al grupo sudo
+
+En algunas distribuciones no añade al usuario principal al grupo de superusuario por defecto, eso se puede arreglar primero pasando a usuario root usando el comando `su` y después ejecutando `sudo usermod -aG sudo <username>` sustituyendo el nombre de usuario por el que haga falta.
+
+### Sincronizar el reloj con la hora local de Windows
+
+Por defecto Windows guarda en la pila RTC el reloj en zona horaria local en vez de UTC como Linux. Para arreglarlo hay que cambiar que Linux guarde también la hora local. Esto se puede conseguir ejecutando `sudo timedatectl set-local-rtc 1 --adjust-system-clock`
