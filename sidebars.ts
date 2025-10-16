@@ -6,6 +6,11 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   docs: [
     {
+      type: 'doc',
+      id: 'index',
+      label: 'Inicio',
+    },
+    {
       type: 'category',
       label: 'Sobre GPUL',
       items: [
