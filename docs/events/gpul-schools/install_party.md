@@ -28,7 +28,7 @@ Si está activado el Bitlocker se recomienda desactivarlo para hacer dual boot, 
 
 Para ello hay que ir a la configuración de la cuenta de Windows asociada al portátil y acceder a *Dispositivos > Ver detalles > Administrar claves de recuperación de Bitlocker* y copiar los datos que aparezcan ahí en otro dispositivo.
 
-Para quitarlo es necesario ir a la configuración del sistema al apartado de Bitlocker o ejecutar en un `cmd` con privilegios de administrador el comando `manage-bde -status` para comprobar si está habilitado y `manage-bde -off` para deshabilitarlo.
+Para quitarlo es necesario ir a la configuración del sistema al apartado de Bitlocker o ejecutar en un `cmd` con privilegios de administrador el comando `manage-bde -status` para comprobar si está habilitado y `manage-bde -off C:` para deshabilitarlo.
 
 
 ### Intel Rapid Storage Technology
@@ -57,8 +57,9 @@ Al intentar reducir el volumen suele aparecer información extra de porqué no s
 
 Desde un USB externo con un instalador de Windows o un entorno mínimo (se explican más abajo las opciones, pero es recomendable usar un instalador) hay que ejecutar en un terminal `diskpart`. Una vez dentro hay que ejecutar `list vol` y localizar el volumen a reducir, tras lo cual se ejecuta `select vol <n>` (sustituyendo `n` por el número de volumen a reducir) y finalmente se ejecuta `shrink desired=<y>`, siendo `y` el número a reducir en MB (por ejemplo, 50GB es 50000). Si ha funcionado diskpart lo dirá.
 
-## Proceso de instalación
-### Comprobar el bootloader de Windows
+## Para la instalación
+### Bootloader de Windows
+#### Comprobar el bootloader de Windows
 
 Dentro de Windows usando la herramienta `diskmgmt.msc` comprobar el tamaño de la partición de arranque de Windows. Si es de 100MB o menos es muy probable que vaya a dar problemas al instalar Linux.
 
@@ -66,11 +67,11 @@ Por algún motivo los instaladores de la mayoría de distribuciones de Linux aun
 
 Para solucionar esto se recomienda tener un instalador de Windows a mano o en su defecto [Win10XPE](https://github.com/ChrisRfr/Win10XPE), aunque es mejor el instalador (estas instrucciones asumen que se está usando un instalador).
 
-### Instalar Linux sin bootloader de Windows
+#### Instalar Linux sin bootloader de Windows
 
 Desde un instalador de Windows hay que pulsar Shift+F10 para abrir un terminal, ejecutar `diskpart` y dentro del programa `list partition` y comprobar el offset (que suele ser 1024) y el tamaño, y apuntarlo. Después hay que borrar desde el instalador de Linux la partición de arranque de Windows y continuar de normal con una partición de arranque EFI exclusiva para Linux (al crear la partición de EFI para Linux es importante no ponerla en el hueco donde previamente estaba la de Windows, que suele ser al principio). **CUIDADO DE NO BORRAR LA PARTICIÓN PRIMARIA DE WINDOWS, SOLO LA DE ARRANQUE**.
 
-### Recrear el bootloader de Windows
+#### Recrear el bootloader de Windows
 
 Para los pasos descritos a continuación se recomienda tener activado Secure Boot si se desactivó previamente o se pretende dejarlo activado al acabar ya que si no después el bootloader de Windows recreado puede fallar.
 
@@ -82,10 +83,16 @@ Antes de salir de `diskpart` es bueno comprobar la letra de montaje de Windows y
 
 Finalmente instalamos el bootloader (ya fuera de `diskpart`), asumiendo que _C:_ es la ruta de Windows y _S:_ la del bootloader (pero a la hora de ejecutar el comando hay que cambiarlas por las letras correspondientes en cada caso), y usando `bcdboot C:\Windows /s S: /f UEFI` se instalarán los archivos del bootloader. Si no da fallos hemos acabado, se puede reiniciar y verificar que funciona.
 
+### Tarjeta de red
+
+Algunas tarjetas de red de Mediatek o de Intel pueden no funcionar en algunas versiones de kernel. Hay varias formas de arreglarlo pero la recomendada es usar una distribución con un kernel reciente ya que suelen tener los drivers de dichas tarjetas ya instalados.
+
+Para comprobar si la tarjeta es de Mediatek se puede usar `lshw -C network` o `lspci`.
+
 ## Post-instalación
 ### GRUB
 
-En algunas distribuciones de Linux los comandos y directorios en vez de  `grub` pueden ser `grub2`, se recomienda revisarlo y simplemente sustituír cuando sea necesario.
+En algunas distribuciones de Linux los comandos y directorios en vez de `grub` pueden ser `grub2`, se recomienda revisarlo y simplemente sustituír cuando sea necesario.
 
 #### OS Prober
 
@@ -100,6 +107,8 @@ Esto es opcional pero recomendado, al activarlo el bootloader marcará por defec
 Si el bootloader de GRUB no se instaló bien aún con todo lo descrito anteriormente se puede intentar instalarlo manualmente usando `chroot` desde otra instalación.
 
 El comando para instalar GRUB en un sistema UEFI es `grub-install --target=x86_64-efi --efi-directory=<efi directory> --bootloader-id=GRUB` (el directorio EFI suele ser `/boot/efi` o `/boot/EFI`).
+
+Si sigue fallando puede ser porque no permite crear la entrada en la NVRAM, es suficiente con añadirle `--no-nvram` al comando de `--grub-install`. Eso sí, será necesario añadir la entrada del bootloader a la UEFI manualmente en `<efi dir>/BOOT/` (el bootloader id) y nombre `grubx64.efi` o `bootx64.efi`. 
 
 ### Eduroam
 
@@ -133,6 +142,19 @@ Es posible habilitar Secure Boot en cualquier distribución Linux pero solo algu
 
 Lo primero es asegurarse de que Secure Boot está deshabilitado antes de empezar.
 
+##### Debian / Linux Mint
+
+En principio ambas realizan las firmas automáticamente, solo es necesario realizar el MOK enrollment:
+
+1. `mokutil --import /var/lib/shim-signed/mok/MOK.der`
+    - Si el archivo no existe entonces es que la distribución no está haciendo las firmas automáticamente
+    - Pedirá crear una contraseña, esta contraseña solo se utilizará para el MOK enrollment, por lo que puede ser algo sencillo
+2. `sudo systemctl reboot`
+3. Realizar el MOK enrollment
+4. Habilitar Secure Boot en la UEFI
+
+Es importante mencionar que si se instalan drivers que no estén en el kernel como los de Nvidia en Linux, es necesario firmarlos también cada vez que se actualizen, lo cual puede requerir instalar el driver usando `dkms` y configurarlo para ser firmado al actualizarse. 
+
 ##### Fedora
 
 Para habilitar Secure Boot en Fedora hay que ejecutar los siguientes comandos:
@@ -160,4 +182,4 @@ Al reiniciar aparecerá una pantalla azul del MOK Enrollment:
 
 #### Comprobar si ha funcionado
 
-Para comprobar si Secure Boot se ha habilitado es necesario ejecutar `bootctl` y comprobar si *Secure Boot* aparece como *Enabled (deployed)*.
+Para comprobar si Secure Boot se ha habilitado es necesario ejecutar `bootctl` y comprobar si *Secure Boot* aparece como *Enabled (deployed)* o *Enabled (user)*.
